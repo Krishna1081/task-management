@@ -1,0 +1,257 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.task-manager {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.task-manager:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border-color: rgba(81, 203, 238, 1);
+}
+
+input[type="date"] {
+  width: 150px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-item.completed {
+  background-color: #e0f7e0;
+  text-decoration: line-through;
+  font-weight: 300;
+}
+
+.task-item h3 {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.task-item p {
+  margin: 5px 0;
+  color: #555;
+  font-weight: 300;
+}
+
+.task-item .task-actions button {
+  background-color: #f44336;
+}
+
+.task-item .task-actions button:hover {
+  background-color: #d32f2f;
+}
+
+.edit-task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-task input,
+.edit-task textarea {
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.edit-task button {
+  background-color: #2196f3;
+  font-weight: 500;
+}
+
+.edit-task button:hover {
+  background-color: #1976d2;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+.filter-buttons button:active {
+  background-color: #1565c0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-manager {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="date"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+}
+
+/* Poppins Font Variants */
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
